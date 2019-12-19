@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout d'annonce{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="page-header">
+        <h1>Annonce</h1>
+    </div>
+
+    <div class="col-4 offset-4">
+
+        {{form_start(formn {'attr': {'novalidate': "novalidate"}})}}
+        {{ form_end }}
+    </div>
+</div>
+
+{% endblock %}

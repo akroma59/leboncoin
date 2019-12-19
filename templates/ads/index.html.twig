@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% set title = "Ads (index)" %}
+{% block title title %}
+
+{% block body %}
+<div class="container">
+    <div class="page-header">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div class="container-fluid bg-dark row mt-3 ">
+
+        {% for ad in ads %}
+        <div class="card my-2 mx-2" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ad.title}}</h5>
+              <p class="card-text">{{ad.description}}</p>
+              <p class="card-text">{{ad.price}}</p>
+              <a href="{{path ('ads:read', {'id':ad.id} ) }}" class="btn btn-primary">Voir l'annonce</a>
+            </div>
+          </div>
+        {% endfor %}
+        
+    </div>
+    
+    
+</div>
+{% endblock %}
